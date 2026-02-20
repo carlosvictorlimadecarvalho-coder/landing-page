@@ -1,0 +1,6 @@
+body{
+    background-color: #e5e5f7;
+opacity: 0.5;
+background-image: radial-gradient(circle at center center, #9602ff, #e5e5f7), repeating-radial-gradient(circle at center center, #9602ff, #9602ff, 10px, transparent 20px, transparent 10px);
+background-blend-mode: multiply;
+}
