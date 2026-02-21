@@ -133,9 +133,12 @@ button{
     padding: 10px 20px;
     border-radius: 20px;
     background: rgb(220, 129, 243);
+    cursor: pointer;
+    transition: transform 0.6s ease;
 }
 button:hover{
     background: rgb(200, 100, 220);
+    transform: scale(1.15);
 }
 @media only screen and (max-width: 600px) {
     .msg{
