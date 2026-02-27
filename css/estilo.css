@@ -6,10 +6,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(../Cool\ colorful\ backgrounds\ for\ your\ landing\ page.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    height: 2000px;
 }
 .container{
     display: flex;
@@ -40,7 +37,7 @@ body{
 .itens a{
     text-decoration: none;
     color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     display: inline-block;
 }
 .itens a:hover{
@@ -62,7 +59,7 @@ body{
 
     width: 0ch;
     animation-delay: 2s;
-    animation: mark 1s step-end infinite, write 6s steps(30) forwards;
+    animation: mark 1s step-end infinite, write 6s steps(30) forwards alternate;
 
 }
 @keyframes mark{
@@ -88,6 +85,9 @@ body{
 .areaPrincipal{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    animation: opacidade linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
 }
 #pt1{
     margin-top: 20px;
@@ -143,10 +143,60 @@ button{
     background: rgb(220, 129, 243);
     cursor: pointer;
     transition: transform 0.6s ease;
+    overflow: hidden;
+    position: relative;
+
+    animation: opacidade linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
 }
 button:hover{
-    background: rgb(200, 100, 220);
+    width: 300% 300%;
     transform: scale(1.15);
+    animation: rgb 10s ease infinite;
+}
+@keyframes opacidade{
+    0%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0.6;
+    }
+    80%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 0.1;
+    }
+
+}
+.welcome{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: rgb(174, 64, 247);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, background 0.3s ease;
+}
+.welcome.small{
+    height: 60px;
+}
+.header{
+    position: relative;
+    display: block;
+    height: 100%;
+
+    
+    background-image: url(../Cool\ colorful\ backgrounds\ for\ your\ landing\ page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-size: 100%;
 }
 @media only screen and (max-width: 600px) {
     .msg{

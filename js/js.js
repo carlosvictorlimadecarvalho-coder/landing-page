@@ -7,4 +7,13 @@ window.addEventListener("load", () => {
         document.querySelector("#pt2").classList.add("ativo");
     }, 100);
 });
-let a
+const welcome = document.querySelector('.welcome');
+const header = document.querySelector('.header');
+window.addEventListener("scroll", function(){
+    if(this.window.scrollY>50){
+        welcome.classList.add("small");
+        
+    } else{
+        welcome.classList.remove("small");
+    }
+});
