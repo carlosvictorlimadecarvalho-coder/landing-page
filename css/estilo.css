@@ -9,7 +9,6 @@ html{
 body{
     margin: 0;
     padding: 0;
-    height: 1250px;
 }
 .container{
     display: flex;
@@ -168,6 +167,31 @@ button:hover{
     }
 
 }
+.horizontal-section {
+  height: 350vh; /* altura grande para permitir scroll */
+}
+
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.horizontal-content {
+  display: flex;
+  height: 100%;
+}
+
+.panel {
+  min-width: 80vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
 .header{
     position: relative;
     display: block;
@@ -199,7 +223,7 @@ button:hover{
 
     animation: opacidade2 1ms ease-in-out;
     animation-timeline: scroll() ;
-    animation-range: 0 35%;
+    animation-range: 0 100%;
     z-index: 1;
 }
 .separa,
@@ -249,11 +273,17 @@ button:hover{
 
 @keyframes opacidade2{
     from{
-        translate: -100vw 0;
+        translate: -900vw 0;
     }
     to{
         translate: 0 0;
     }
+}
+.redes{
+    background: purple;
+    width: 100%;
+    text-align: center;
+    height: auto;
 }
 @media only screen and (max-width: 600px) {
     .msg{
